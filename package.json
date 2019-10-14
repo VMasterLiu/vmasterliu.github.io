@@ -1,0 +1,13 @@
+{
+  "name": "vuepress_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc-d": "vuepress dev docs",
+    "doc-b": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
