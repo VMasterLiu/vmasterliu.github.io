@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "doc-d": "vuepress dev docs",
-    "doc-b": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "vuepress": "^1.2.0",
+    "vuepress-theme-meteorlxy": "^1.5.1"
+  }
 }
