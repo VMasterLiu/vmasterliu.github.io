@@ -20,7 +20,10 @@ module.exports = {
     theme: 'meteorlxy',
     themeConfig: {
         // 主题语言，参考下方 [主题语言] 章节
-        lang: 'zh-CN',
+        // lang: 'zh-CN',
+        lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
+            home: '欢迎来到我的首页',
+        }),
         nav: [
             { text: '首页', link: '/', exact: true },
             { text: '文章', link: '/posts/', exact: false },
@@ -44,11 +47,9 @@ module.exports = {
             background: {
                 // 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效
                 // url: '/assets/img/bg.jpg',
-
                 // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景
                 useGeo: true,
             },
-
             // 是否在 header 显示标题
             showTitle: true,
         },
@@ -66,19 +67,14 @@ module.exports = {
         personalInfo: {
             // 昵称
             nickname: 'paulf',
-
             // 个人简介 (支持 HTML)
             description: 'Coding Life',
-
             // 电子邮箱
             email: 'xxxx@foxmail.com',
-
             // 所在地
             location: 'Guangzhou, China',
-
             // 组织
             // organization: 'Xi\'an Jiao Tong University',
-
             // 头像可以为外链或者放置在 .vuepress/public 文件夹，例如 .vuepress/public/img/avatar.jpg
             avatar: '/img/avatar.jpg',
         },
