@@ -1,10 +1,10 @@
 ---
-{
-	"title":"VuePress 搭建博客以及部署到 Github Pages",
-	"date":"2019-10-21",
-	"category":"vuepress",
-	"tags":["tool","vue"]
-}
+title: VuePress 搭建博客以及部署到 Github Pages
+date: 2019-10-21
+category: vuepress
+tags: 
+  - tool
+  - vue
 ---
 
 这是第一篇博客，记录如何使用 `VuePress` 配合博客主题来搭建此博客。
@@ -42,7 +42,7 @@ npm init -y
 
 会生成一个`package.json`文件，把其中的`scripts`改为
 
-```json
+````
 "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
