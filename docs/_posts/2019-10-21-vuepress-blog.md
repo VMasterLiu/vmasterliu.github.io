@@ -1,10 +1,10 @@
 ---
-title: VuePress 搭建博客以及部署到 Github Pages
-date: 2019-10-21
-category: vuepress
-tags: 
-  - tool
-  - vue
+{
+	"date": "2019-10-21",
+	"title": "VuePress 搭建博客以及部署到 Github Pages",
+	"category": "vuepress",
+	"tags":["vue","too"]
+}
 ---
 
 这是第一篇博客，记录如何使用 `VuePress` 配合博客主题来搭建此博客。
@@ -42,12 +42,15 @@ npm init -y
 
 会生成一个`package.json`文件，把其中的`scripts`改为
 
-````
-"scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+```json
+{
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src --dest dist"
+  }
 }
 ```
+
 
 接下来安装相关主题，这里使用的是`vuepress-theme-meteorlxy`，不需要全局安装`vueprss`，在这里安装即可
 
@@ -57,7 +60,7 @@ npm install vuepress vuepress-theme-meteorlxy -D
 
 安装完成后的目录结构是这样的
 
-```
+```sh
 .
 |-- node_modules
 |-- package-lock.json
@@ -66,7 +69,7 @@ npm install vuepress vuepress-theme-meteorlxy -D
 
  VuePress 遵循 **“约定优于配置”** 的原则，推荐的目录结构如下： 
 
-```
+```sh
 .
 ├── docs
 │   ├── .vuepress (可选的)
@@ -112,7 +115,7 @@ npm install vuepress vuepress-theme-meteorlxy -D
 
 所以，按照官方推荐的目录结构，在`vuepress-blog`目录下新建`docs`文件夹，再在`docs`下新建`.vuepress`和`_posts`两个文件夹，在`.vuepress`下新建`config.js`，结构如下
 
-```
+```sh
 docs
 |-- .vuepress
 |   `-- config.js
@@ -122,7 +125,8 @@ docs
 这样一个基本的博客框架算是完成了，通过对上述`config.js`的配置就可以实现自己的个性化设置
 
 <details>
-<summary><font color="blue">点击查看我的配置</font></summary>
+<summary><span style="color:blue">点击查看我的配置</span></summary>
+
 
 ```js
 module.exports = {
