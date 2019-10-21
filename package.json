@@ -1,18 +1,16 @@
 {
   "name": "vuepress-blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "vuepress blog",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs --dest dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "esm": "^3.2.25",
     "vuepress": "^1.2.0",
     "vuepress-theme-meteorlxy": "^1.5.1"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }

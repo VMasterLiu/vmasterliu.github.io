@@ -3,7 +3,7 @@
 # 构建
 npm run build
 # 导航到构建输出目录
-cd docs/.vuepress/dist
+cd dist
 
 # 发布到自定义域名
 echo 'blog.bytecoding.net' > CNAME

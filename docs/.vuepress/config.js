@@ -5,7 +5,7 @@ module.exports = {
         // 增加一个自定义的 favicon(网页标签的图标)
         // 这里的 '/' 指向 docs/.vuepress/public 文件目录
         // 即 docs/.vuepress/public/img/geass-bg.ico
-        ['link', { rel: 'icon', href: '/img/fav.ico' }],
+        ['link', {rel: 'icon', href: '/img/fav.ico'}],
     ],
     host: 'localhost',
     port: 8098,
@@ -23,11 +23,12 @@ module.exports = {
         // lang: 'zh-CN',
         // 可以自定义想要的文本翻译
         lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
-            home: '欢迎来到我的首页',
-        }),
+                home: '欢迎来到我的首页',
+            }
+        ),
         nav: [
-            { text: '首页', link: '/', exact: true },
-            { text: '文章', link: '/posts/', exact: false },
+            {text: '首页', link: '/', exact: true},
+            {text: '文章', link: '/posts/', exact: false},
         ],
         // 分页配置 (可选)
         pagination: {

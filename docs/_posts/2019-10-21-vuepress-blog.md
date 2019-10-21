@@ -1,10 +1,10 @@
 ---
-title: VuePress 搭建博客以及部署到 Github Pages
-date: 2019-10-21
-category: vuepress
-tags: 
-  - tool
-  - vue
+{
+	"title":"VuePress 搭建博客以及部署到 Github Pages",
+	"date":"2019-10-21",
+	"category":"vuepress",
+	"tags":["tool","vue"]
+}
 ---
 
 这是第一篇博客，记录如何使用 `VuePress` 配合博客主题来搭建此博客。
@@ -91,7 +91,7 @@ npm install vuepress vuepress-theme-meteorlxy -D
 └── package.json
 ```
 
-:::  warning 提醒
+:::  warning
 
 目录结构的命名区分大小写，相关目录说明如下
 
@@ -150,7 +150,7 @@ module.exports = {
         // lang: 'zh-CN',
         // 可以自定义想要的文本翻译
         lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
-            home: '欢迎来到我的首页',
+            home: '欢迎来到我的首页'
         }),
         nav: [
             { text: '首页', link: '/', exact: true },
