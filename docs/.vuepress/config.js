@@ -1,6 +1,6 @@
 module.exports = {
     title: 'ByteCoding',
-    description: 'This is my blog',
+    description: '个人博客，技术成长，积累，记录',
     head: [
         // 增加一个自定义的 favicon(网页标签的图标)
         // 这里的 '/' 指向 docs/.vuepress/public 文件目录
@@ -19,8 +19,9 @@ module.exports = {
     // 使用的主题
     theme: 'meteorlxy',
     themeConfig: {
-        // 主题语言，参考下方 [主题语言] 章节
+        // 主题语言
         // lang: 'zh-CN',
+        // 可以自定义想要的文本翻译
         lang: Object.assign(require('vuepress-theme-meteorlxy/lib/langs/zh-CN'), {
             home: '欢迎来到我的首页',
         }),
@@ -78,7 +79,7 @@ module.exports = {
             // 头像可以为外链或者放置在 .vuepress/public 文件夹，例如 .vuepress/public/img/avatar.jpg
             avatar: '/img/avatar.jpg',
         },
-        //评论开启
+        //评论是否开启
         comments: false,
     }
 };
