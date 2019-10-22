@@ -4,7 +4,7 @@
 npm run build
 # 保存历史commit记录，否则每次commit之后只有一条commit信息
 git clone git@github.com:paulfliu/paulfliu.github.io.git .temp
-mv .temp/.git dist
+cp .temp/.git dist
 # 导航到构建输出目录
 cd dist
 
