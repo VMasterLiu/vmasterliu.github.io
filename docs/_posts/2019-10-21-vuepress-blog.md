@@ -3,7 +3,7 @@
 	"date": "2019-10-21",
 	"title": "VuePress 搭建博客以及部署到 Github Pages",
 	"category": "vuepress",
-	"tags":["vue","too"]
+	"tags": ["vue","tool","blog"]
 }
 ---
 
@@ -226,6 +226,6 @@ module.exports = {
 npm run dev
 ```
 
-由于配置中指定了端口，所以运行`http://localhost:8089`就可以查看了
+由于配置中指定了端口，所以运行`http://localhost:8089`就可以查看
 
 其他的配置可以去[VuePress官网](https://vuepress.vuejs.org/zh/config/)具体查看
