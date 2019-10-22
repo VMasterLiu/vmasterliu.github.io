@@ -2,13 +2,15 @@
 
 # 构建
 npm run build
+# 保存历史commit记录，否则每次commit之后只有一条commit信息
+git clone git@github.com:paulfliu/paulfliu.github.io.git .temp
+mv .temp/.git dist
 # 导航到构建输出目录
 cd dist
 
 # 发布到自定义域名
 echo 'blog.bytecoding.net' > CNAME
 
-git init
 git add -A
 git commit -m 'deploy'
 
