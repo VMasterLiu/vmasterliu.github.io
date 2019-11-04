@@ -1,16 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>VuePress</title>
-    <meta name="description" content="">
+    <title>VuePress 搭建博客以及部署到 Github Pages | ByteCoding</title>
+    <meta name="description" content="个人博客，技术成长，积累，记录">
     <link rel="icon" href="/img/fav.ico">
-    <link rel="preload" href="/assets/css/0.styles.386d50f9.css" as="style"><link rel="preload" href="/assets/js/app.0f530911.js" as="script"><link rel="prefetch" href="/assets/js/1.7445d41e.js"><link rel="prefetch" href="/assets/js/10.693663c4.js"><link rel="prefetch" href="/assets/js/11.0f84b946.js"><link rel="prefetch" href="/assets/js/12.fe9f0a3f.js"><link rel="prefetch" href="/assets/js/13.30a8781e.js"><link rel="prefetch" href="/assets/js/14.20c65cdc.js"><link rel="prefetch" href="/assets/js/15.78e2c9f2.js"><link rel="prefetch" href="/assets/js/3.68dc7246.js"><link rel="prefetch" href="/assets/js/4.25d0427d.js"><link rel="prefetch" href="/assets/js/5.79cab1d3.js"><link rel="prefetch" href="/assets/js/6.5d4bfea6.js"><link rel="prefetch" href="/assets/js/7.54c6af48.js"><link rel="prefetch" href="/assets/js/8.8f0f6e48.js"><link rel="prefetch" href="/assets/js/9.9049859c.js">
+    <link rel="preload" href="/assets/css/0.styles.386d50f9.css" as="style"><link rel="preload" href="/assets/js/app.1535032a.js" as="script"><link rel="preload" href="/assets/js/7.54c6af48.js" as="script"><link rel="preload" href="/assets/js/13.30a8781e.js" as="script"><link rel="prefetch" href="/assets/js/1.7445d41e.js"><link rel="prefetch" href="/assets/js/10.693663c4.js"><link rel="prefetch" href="/assets/js/11.0f84b946.js"><link rel="prefetch" href="/assets/js/12.fe9f0a3f.js"><link rel="prefetch" href="/assets/js/14.20c65cdc.js"><link rel="prefetch" href="/assets/js/15.78e2c9f2.js"><link rel="prefetch" href="/assets/js/3.68dc7246.js"><link rel="prefetch" href="/assets/js/4.25d0427d.js"><link rel="prefetch" href="/assets/js/5.79cab1d3.js"><link rel="prefetch" href="/assets/js/6.5d4bfea6.js"><link rel="prefetch" href="/assets/js/8.8f0f6e48.js"><link rel="prefetch" href="/assets/js/9.9049859c.js">
     <link rel="stylesheet" href="/assets/css/0.styles.386d50f9.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><!----><div class="global-ui"><!----><!----></div></div>
-    <script src="/assets/js/app.0f530911.js" defer></script>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-0be91240><div data-v-740e207b data-v-0be91240><nav class="navbar" data-v-740e207b><div class="container" data-v-740e207b><a href="/" class="router-link-active" data-v-740e207b><span class="navbar-site-name" data-v-740e207b>
+          ByteCoding
+        </span></a> <div class="navbar-toggler" data-v-740e207b><svg class="icon" style="font-size:1.2em;" data-v-740e207b data-v-740e207b><title data-v-740e207b data-v-740e207b>menu</title><use xlink:href="#icon-menu" data-v-740e207b data-v-740e207b></use></svg></div> <div class="navbar-links" data-v-740e207b><a href="/" class="navbar-link" data-v-740e207b>
+            首页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-740e207b>
+            文章
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-740e207b></div></div> <div class="banner" data-v-98d6aa8c data-v-0be91240 data-v-0be91240><div class="container" data-v-98d6aa8c><div class="center" data-v-98d6aa8c><h1 data-v-98d6aa8c data-v-0be91240>
+          VuePress 搭建博客以及部署到 Github Pages
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-6e91a59a data-v-6e91a59a><main class="main" data-v-6e91a59a><div class="post" data-v-6e91a59a data-v-6e91a59a><section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2019-10-21
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2019-10-24
+    </span></section> <section class="post-links" data-v-4e23451f><!----> <!----></section></section> <article class="main-div"><div class="post-content content content__default"><p>这是第一篇博客，记录如何使用 <code>VuePress</code> 配合博客主题来搭建此博客并部署上线。</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>现在，开始吧</p></div> <h2 id="vuepress"><a href="#vuepress" aria-hidden="true" class="header-anchor">#</a> VuePress</h2> <p>根据<code>VuePress</code>官网的介绍：</p> <blockquote><p>VuePress 由两部分组成：第一部分是一个<a href="https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/core" target="_blank" rel="noopener noreferrer">极简静态网站生成器<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，它包含由 Vue 驱动的<a href="https://vuepress.vuejs.org/zh/theme/" target="_blank" rel="noopener noreferrer">主题系统<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>和<a href="https://vuepress.vuejs.org/zh/plugin/" target="_blank" rel="noopener noreferrer">插件 API<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，另一个部分是为书写技术文档而优化的<a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer">默认主题<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，它的诞生初衷是为了支持 Vue 及其子项目的文档需求。</p></blockquote> <p>随着<code>vuepress 1.x</code>的发布，增加了插件<code>API</code>和博客主题，此时<code>VuePress</code>已经不仅可以用来作为展示技术文档，也可以结合自定义的主题成为适合自己的博客。</p> <h3 id="安装使用"><a href="#安装使用" aria-hidden="true" class="header-anchor">#</a> 安装使用</h3> <p>首先初始化一个文件夹，我们就叫<code>vuepress-blog</code>，进入该文件夹</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">mkdir</span> vuepress-blog
+<span class="token builtin class-name">cd</span> vuepress-blog
+</code></pre></div><p>初始化我们的博客项目</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> init -y
+</code></pre></div><p>会生成一个<code>package.json</code>文件，把其中的<code>scripts</code>改为</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build src --dest dist&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>接下来安装相关主题，这里使用的是<code>vuepress-theme-meteorlxy</code>，不需要全局安装<code>vueprss</code>，在这里安装即可</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> vuepress vuepress-theme-meteorlxy -D	
+</code></pre></div><p>安装完成后的目录结构是这样的</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">.</span>
+<span class="token operator">|</span>-- node_modules
+<span class="token operator">|</span>-- package-lock.json
+`-- package.json
+</code></pre></div><p>VuePress 遵循 <strong>“约定优于配置”</strong> 的原则，推荐的目录结构如下：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">.</span>
+├── docs
+│   ├── .vuepress <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   ├── components <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   ├── theme <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   │   └── Layout.vue
+│   │   ├── public <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   ├── styles <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   │   ├── index.styl
+│   │   │   └── palette.styl
+│   │   ├── templates <span class="token punctuation">(</span>可选的, 谨慎配置<span class="token punctuation">)</span>
+│   │   │   ├── dev.html
+│   │   │   └── ssr.html
+│   │   ├── config.js <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   └── enhanceApp.js <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │ 
+│   ├── README.md
+│   ├── guide
+│   │   └── README.md
+│   └── config.md
+│ 
+└── package.json
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>目录结构的命名区分大小写，相关目录说明如下</p></div> <ul><li><code>docs/.vuepress</code>: 用于存放全局的配置、组件、静态资源等。</li> <li><code>docs/.vuepress/components</code>: 该目录中的 Vue 组件将会被自动注册为全局组件。</li> <li><code>docs/.vuepress/theme</code>: 用于存放本地主题。</li> <li><code>docs/.vuepress/styles</code>: 用于存放样式相关的文件。</li> <li><code>docs/.vuepress/styles/index.styl</code>: 将会被自动应用的全局样式文件，会生成在最终的 CSS 文件结尾，具有比默认样式更高的优先级。</li> <li><code>docs/.vuepress/styles/palette.styl</code>: 用于重写默认颜色常量，或者设置新的 stylus 颜色常量。</li> <li><code>docs/.vuepress/public</code>: 静态资源目录。</li> <li><code>docs/.vuepress/templates</code>: 存储 HTML 模板文件。</li> <li><code>docs/.vuepress/templates/dev.html</code>: 用于开发环境的 HTML 模板文件。</li> <li><code>docs/.vuepress/templates/ssr.html</code>: 构建时基于 Vue SSR 的 HTML 模板文件。</li> <li><code>docs/.vuepress/config.js</code>: 配置文件的入口文件，也可以是 <code>YML</code> 或 <code>toml</code>。</li> <li><code>docs/.vuepress/enhanceApp.js</code>: 客户端应用的增强。</li></ul> <p>所以，按照官方推荐的目录结构，在<code>vuepress-blog</code>目录下新建<code>docs</code>文件夹，再在<code>docs</code>下新建<code>.vuepress</code>和<code>_posts</code>两个文件夹，在<code>.vuepress</code>下新建<code>config.js</code>，结构如下</p> <div class="language-sh extra-class"><pre class="language-sh"><code>docs
+<span class="token operator">|</span>-- .vuepress
+<span class="token operator">|</span>   <span class="token variable"><span class="token variable">`</span>-- config.js
+<span class="token variable">`</span></span>-- _posts
+</code></pre></div><p>这样一个基本的博客框架算是完成了，通过对上述<code>config.js</code>的配置就可以实现自己的个性化设置</p> <details><summary><span style="color:blue;">点击查看我的配置</span></summary> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">'ByteCoding'</span><span class="token punctuation">,</span>
+    description<span class="token punctuation">:</span> <span class="token string">'This is my blog'</span><span class="token punctuation">,</span>
+    head<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// 增加一个自定义的 favicon(网页标签的图标)</span>
+        <span class="token comment">// 这里的 '/' 指向 docs/.vuepress/public 文件目录</span>
+        <span class="token comment">// 即 docs/.vuepress/public/img/geass-bg.ico</span>
+        <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> rel<span class="token punctuation">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span> href<span class="token punctuation">:</span> <span class="token string">'/img/fav.ico'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    host<span class="token punctuation">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+    port<span class="token punctuation">:</span> <span class="token number">8098</span><span class="token punctuation">,</span>
+    evergreen<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token comment">// 网站语言</span>
+    locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            lang<span class="token punctuation">:</span> <span class="token string">'zh-CN'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 使用的主题</span>
+    theme<span class="token punctuation">:</span> <span class="token string">'meteorlxy'</span><span class="token punctuation">,</span>
+    themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 主题语言</span>
+        <span class="token comment">// lang: 'zh-CN',</span>
+        <span class="token comment">// 可以自定义想要的文本翻译</span>
+        lang<span class="token punctuation">:</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vuepress-theme-meteorlxy/lib/langs/zh-CN'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            home<span class="token punctuation">:</span> <span class="token string">'欢迎来到我的首页'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'首页'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> exact<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'文章'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">'/posts/'</span><span class="token punctuation">,</span> exact<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">// 分页配置 (可选)</span>
+        pagination<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            perPage<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 默认页面（可选，默认全为 true）</span>
+        defaultPages<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 是否允许主题自动添加 Home 页面 (url: /)</span>
+            home<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token comment">// 是否允许主题自动添加 Posts 页面 (url: /posts/)</span>
+            posts<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 是否显示文章的最近更新时间</span>
+        lastUpdated<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 上方 header 的相关设置 (可选)</span>
+        header<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// header 的背景，可以使用图片，或者随机变化的图案（geopattern）</span>
+            background<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效</span>
+                <span class="token comment">// url: '/assets/img/bg.jpg',</span>
+                <span class="token comment">// 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景</span>
+                useGeo<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// 是否在 header 显示标题</span>
+            showTitle<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 个人信息卡片相关设置 (可选)</span>
+        infoCard<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 卡片 header 的背景，可以使用图片，或者随机变化的图案（geopattern）</span>
+            headerBackground<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效</span>
+                <span class="token comment">// url: '/assets/img/bg.jpg',</span>
+                <span class="token comment">// 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景</span>
+                useGeo<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 个人信息</span>
+        personalInfo<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 昵称</span>
+            nickname<span class="token punctuation">:</span> <span class="token string">'paulf'</span><span class="token punctuation">,</span>
+            <span class="token comment">// 个人简介 (支持 HTML)</span>
+            description<span class="token punctuation">:</span> <span class="token string">'Coding Life'</span><span class="token punctuation">,</span>
+            <span class="token comment">// 电子邮箱</span>
+            email<span class="token punctuation">:</span> <span class="token string">'xxxx@foxmail.com'</span><span class="token punctuation">,</span>
+            <span class="token comment">// 所在地</span>
+            location<span class="token punctuation">:</span> <span class="token string">'XXXXX, China'</span><span class="token punctuation">,</span>
+            <span class="token comment">// 组织</span>
+            <span class="token comment">// organization: 'XXXXXXX',</span>
+            <span class="token comment">// 头像可以为外链或者放置在 .vuepress/public 文件夹，例如 .vuepress/public/img/avatar.jpg</span>
+            avatar<span class="token punctuation">:</span> <span class="token string">'/img/avatar.jpg'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">//评论是否开启</span>
+        comments<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></details> <p>上述配置中指定了图片，所以需要在<code>.vuepress</code>文件夹中新建<code>public/img</code>的结构并添加相关图片</p> <p>目前所有的文章都放在<code>_post</code>文件夹下，新建一个Markdown文件，为了文章链接的唯一性，建议Markdown文件参照<code>2019-01-01-xxxxx.md</code>这种格式命名，例如我们新建一个<code>2019-01-01-index.md</code>的文件，随便写上一些内容，具体配置参考下面的说明。</p> <p>开发模式运行</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> run dev
+</code></pre></div><p>由于配置中指定了端口，所以运行<code>http://localhost:8089</code>就可以开发自己的博客了，其他有关<code>VuePress</code>的配置可以去<a href="https://vuepress.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">VuePress官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>查看。</p> <p>博客主题使用了<code>vuepress-theme-meteorlxy</code>，具体详细配置可以<a href="https://vuepress-theme-meteorlxy.meteorlxy.cn/" target="_blank" rel="noopener noreferrer">点这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>去查看，感谢大佬开发的主题。下面简要记录一下常用配置</p> <h3 id="front-matter"><a href="#front-matter" aria-hidden="true" class="header-anchor">#</a> Front Matter</h3> <p>任何包含 <code>YAML front matter</code> 的 <code>Markdown</code> 文件都将由 <a href="https://github.com/jonschlinkert/gray-matter" target="_blank" rel="noopener noreferrer">gray-matter<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 处理。<code>front matter</code> 必须是 <code>markdown</code> 文件中的第一部分，并且必须采用在三点划线之间书写的有效的<code>YAML</code>。 例如：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> This is blog title
+<span class="token key atrule">lang</span><span class="token punctuation">:</span> en<span class="token punctuation">-</span>US
+<span class="token punctuation">---</span>
+</code></pre></div><p>在这些三条虚线之间，你可以设置预定义变量，甚至可以创建自己的自定义变量。 然后，您可以使用 <code>$frontmatter</code> 在页面的其余部分、以及所有的自定义和主题组件访问这些变量 。</p> <p>除了 <code>YAML</code> 之外，<code>VuePress</code> 也支持 <code>JSON</code> 格式的<code>Front Matter</code>，例如：</p> <div class="language-json extra-class"><pre class="language-json"><code>---
+<span class="token punctuation">{</span>
+	<span class="token property">&quot;title&quot;</span><span class="token operator">:</span><span class="token string">&quot;This is blog title&quot;</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;lang&quot;</span><span class="token operator">:</span><span class="token string">&quot;zh-CN&quot;</span>
+<span class="token punctuation">}</span>
+---
+</code></pre></div><h4 id="通用-front-matter"><a href="#通用-front-matter" aria-hidden="true" class="header-anchor">#</a> 通用 Front Matter</h4> <p>这些 Front Matter 可以在自定义页面和文章中使用。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token comment"># 当前页面/文章的标题，会显示在顶部的 banner 中</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Welcome to vuepresss<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>meteorlxy
+<span class="token comment"># 当前页面/文章的 layout，前往 [Custom Pages] 查看详细用法</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> CustomLayout
+<span class="token comment"># 是否在当前页面显示个人信息卡片</span>
+<span class="token comment">## 默认： `true`</span>
+<span class="token key atrule">aside</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment"># 使用图片作为当前页面的 Header 背景</span>
+<span class="token comment"># 如果传入数组，则每次进入该页面时随机选取一个图片显示</span>
+<span class="token comment">## 默认： `undefined`</span>
+<span class="token key atrule">header-image</span><span class="token punctuation">:</span> /assets/img/header<span class="token punctuation">-</span>image<span class="token punctuation">-</span>01.jpg
+<span class="token key atrule">header-image</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> /assets/img/header<span class="token punctuation">-</span>image<span class="token punctuation">-</span>01.jpg
+  <span class="token punctuation">-</span> /assets/img/header<span class="token punctuation">-</span>image<span class="token punctuation">-</span>02.jpg
+  <span class="token punctuation">-</span> /assets/img/header<span class="token punctuation">-</span>image<span class="token punctuation">-</span>03.jpg
+<span class="token comment"># 是否在 Header 显示标题</span>
+<span class="token comment">## 默认： `true`</span>
+<span class="token key atrule">header-title</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token punctuation">---</span>
+</code></pre></div><h4 id="文章-front-matter"><a href="#文章-front-matter" aria-hidden="true" class="header-anchor">#</a> 文章 Front Matter</h4> <p>这些 Frontmatters 只能在文章中使用。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token comment"># 设置是否置顶当前文章</span>
+<span class="token comment">## 默认： `false`</span>
+<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token number">1</span>
+<span class="token key atrule">top</span><span class="token punctuation">:</span> <span class="token number">2</span>
+<span class="token comment"># 设置当前文章的分类</span>
+<span class="token key atrule">category</span><span class="token punctuation">:</span> docs
+<span class="token comment"># 设置当前文章的标签</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> zh
+  <span class="token punctuation">-</span> en
+<span class="token comment"># 设置当前文章的发布时间</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2019-02-27</span>
+<span class="token comment"># 设置是否显示当前文章的额外信息，即 发布时间、修改时间、上一篇、下一篇 等。</span>
+<span class="token comment">## 默认： `true`</span>
+<span class="token key atrule">meta</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token punctuation">---</span>
+</code></pre></div><h2 id="部署到github-pages"><a href="#部署到github-pages" aria-hidden="true" class="header-anchor">#</a> 部署到Github Pages</h2> <p>创建仓库，命名为<code>${yourname}.github.io</code></p> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p><code>${yourname}</code>指的是你自己的<code>github</code>用户名，后续都用<code>${yourname}</code>表示用户名</p></div> <p>之前我们都是以开发模式启动项目的，部署需要将博客进行编译，进入到博客根目录<code>vuepress-blog</code>下</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> run build
+</code></pre></div><p>会在博客根目录下生成一个<code>dist</code>文件夹。这是待会要<code>push</code>到刚刚创建的<code>${yourname}.github.io</code>仓库的。</p> <p>通过下面的命令，依次分别执行后</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token builtin class-name">cd</span> dist
+<span class="token function">git</span> <span class="token function">add</span> -A
+<span class="token function">git</span> commit -m <span class="token string">'deploy'</span>
+<span class="token function">git</span> push -f git@github.com:<span class="token variable">${yourname}</span>/<span class="token variable">${yourname}</span>.github.io.git master
+</code></pre></div><p>这样再次刷新<code>github</code>仓库的页面会发现代码已经传上来了，下面来设置<code>Github Pages</code>相关的设置，</p> <p><img src="/img/1571884812576.png" alt="1571884812576.png"></p> <p>找到<code>GitHub Pages</code>设置的部分，因为<code>build</code>之后上传的博客结构是可以直接通过<code>Github Pages</code>的处理的，并且一定要是<code>master</code>分支，另外私有仓库对于免费用户来说没办法使用<code>Github Pages</code>。</p> <p>现在我们就可以通过<code>http://${yourname}.github.io</code>来访问自己的博客主页了。</p> <h3 id="自定义域名"><a href="#自定义域名" aria-hidden="true" class="header-anchor">#</a> 自定义域名</h3> <p>当然，如果有自己的域名的话那就可以使用自定义域名，在下图的<code>Custom domain</code>中输入自己的域名并保存，然后去你的<code>DNS</code>服务商那里去添加一条<code>CNAME</code>记录，如果不使用二级域名的话，<strong>主机记录</strong>可以不填或者填@，<strong>记录值</strong>为<code>${yourname}.github.io</code>。</p> <p>同时开启<code>HTTPS</code>，如果<code>Enforce HTTPS</code>没法点击的话就删除自定义域名重新保存再点击开启<code>HTTPS</code>，一段时间之后<code>Github</code>便会给你自定义的域名发证书了。</p> <p>好了，愉快的使用<code>https://${yourdomain.com}</code>来访问你的博客吧</p> <p><img src="/img/1571886301925.png" alt="1571886301925.png"></p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p><code>DNS</code>解析生效和<code>HTTPS</code>证书的颁发可能会需要一会时间</p></div> <h3 id="一键部署"><a href="#一键部署" aria-hidden="true" class="header-anchor">#</a> 一键部署</h3> <p>后续博客更新就只需要执行上面的命令就可以了，当然我们可以将这些写成一个脚本，在博客根目录下新建 一个文件<code>deploy.sh</code>，添加下面的代码</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 自动部署脚本</span>
+<span class="token comment"># 构建</span>
+<span class="token function">npm</span> run build
+<span class="token comment"># 保存历史commit记录，否则每次commit之后只有一条commit信息</span>
+<span class="token function">git</span> clone git@github.com:<span class="token variable">${yourname}</span>/<span class="token variable">${yourname}</span>.github.io.git .temp
+<span class="token function">mv</span> .temp/.git dist
+<span class="token function">rm</span> -rf .temp
+<span class="token comment"># 导航到构建输出目录</span>
+<span class="token builtin class-name">cd</span> dist
+<span class="token comment"># 发布到自定义域名</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'<span class="token variable">${yourdomain.com}</span>'</span> <span class="token operator">&gt;</span> CNAME
+<span class="token function">git</span> <span class="token function">add</span> -A
+<span class="token function">git</span> commit -m <span class="token string">'deploy'</span>
+<span class="token comment"># 推到仓库的 master 分支</span>
+<span class="token function">git</span> push -f git@github.com:<span class="token variable">${yourname}</span>/<span class="token variable">${yourname}</span>.github.io.git master
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p><code>${yourdomain.com}</code>要换成自己的域名</p> <p><code>${yourname}</code>要换成自己的<code>github</code>用户名</p></div> <p>执行脚本然后就坐等部署完成了</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sh</span> deploy.sh
+</code></pre></div><p>至此，从安装搭建到部署上线都已经完成，尽情的享受写作之旅吧。</p> <hr> <p>以上内容如有不足和错误之处请指正，谢谢</p></div></article> <section class="post-meta main-div" data-v-4e23451f><section class="post-date clearfix" data-v-4e23451f><span class="create-date" data-v-4e23451f>
+      发布时间 : 2019-10-21
+    </span> <span class="update-date" data-v-4e23451f>
+      最后修改 : 2019-10-24
+    </span></section> <section class="post-links" data-v-4e23451f><!----> <!----></section></section> <!----></div></main> <aside class="aside" data-v-6e91a59a><div class="info-card main-div" data-v-23d90c50 data-v-6e91a59a><div class="info-card-header" data-v-23d90c50><img src="/img/avatar.jpg" alt="Paulf" class="info-avatar" data-v-23d90c50></div> <div class="info-card-body" data-v-23d90c50><section class="info-nickname" data-v-23d90c50>
+      Paulf
+    </section> <section class="info-desc" data-v-23d90c50><p style="margin: 0;">合抱之木，生于毫末</p><p style="margin: 0.3rem 0;">九层之台，起于累土</p><p style="margin: 0;">千里之行，始于足下</p></section> <section class="info-contact" data-v-23d90c50><!----> <!----> <section data-v-23d90c50><a href="mailto:paulf@bytecoding.net" title="paulf@bytecoding.net" data-v-23d90c50 data-v-23d90c50><svg class="icon" style="font-size:1em;" data-v-23d90c50 data-v-23d90c50><title data-v-23d90c50 data-v-23d90c50>paulf@bytecoding.net</title><use xlink:href="#icon-email" data-v-23d90c50 data-v-23d90c50></use></svg><span class="info-text" data-v-23d90c50 data-v-23d90c50>
+          paulf@bytecoding.net
+        </span></a></section></section></div> <!----></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-6e91a59a><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2019/10/21/vuepress-blog.html#vuepress">VuePress</a><ul><li><a href="/posts/2019/10/21/vuepress-blog.html#安装使用">安装使用</a></li><li><a href="/posts/2019/10/21/vuepress-blog.html#front-matter">Front Matter</a></li></ul></li><li><a href="/posts/2019/10/21/vuepress-blog.html#部署到github-pages">部署到Github Pages</a><ul><li><a href="/posts/2019/10/21/vuepress-blog.html#自定义域名">自定义域名</a></li><li><a href="/posts/2019/10/21/vuepress-blog.html#一键部署">一键部署</a></li></ul></li></ul></div></div> <!----></div></aside></div> <footer class="footer" data-v-f018ab8c><!----> <p class="footer-text" data-v-f018ab8c><span data-v-f018ab8c>Powered by </span> <a href="https://github.com/vuejs/vuepress" target="_blank" data-v-f018ab8c>
+      VuePress
+    </a> <span data-v-f018ab8c> | </span> <a href="https://github.com/meteorlxy/vuepress-theme-meteorlxy" target="_blank" data-v-f018ab8c>
+        meteorlxy
+      </a></p> <p class="footer-text" data-v-f018ab8c>Total <span id="busuanzi_value_site_pv"></span> views,&nbsp;&nbsp;you are the <span id="busuanzi_value_site_uv"></span>'th visitor</p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.1535032a.js" defer></script><script src="/assets/js/7.54c6af48.js" defer></script><script src="/assets/js/13.30a8781e.js" defer></script>
   </body>
 </html>
